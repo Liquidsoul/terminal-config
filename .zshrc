@@ -85,5 +85,10 @@ else
 	ZSH_THEME_GIT_PROMPT_UNTRACKED=" ✭"
 fi
 
+if [ -f ~/.zsh_custom_aliases ]
+then
+	source ~/.zsh_custom_aliases
+fi
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/python # Add python dir for pip
