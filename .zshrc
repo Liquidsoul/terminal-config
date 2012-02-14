@@ -28,6 +28,11 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/sbin:/Applications/p4merge.app/Contents/MacOS
 
+# load RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+__rvm_project_rvmrc
+
 #Shows little symbol '±' if you're currently at a git repo and '○' all other times
 function prompt_char {
 	git branch >/dev/null 2>/dev/null && echo '±' && return
@@ -80,3 +85,4 @@ else
 	ZSH_THEME_GIT_PROMPT_UNTRACKED=" ✭"
 fi
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
