@@ -12,11 +12,15 @@
 [alias]
 	co = checkout
 	st = status -sb
+
+	d = diff
 	wd = diff --word-diff
 	ds = diff --staged
 	wds = diff --staged --word-diff
+
 	amend = commit --amend -C HEAD
 	undo = reset --soft HEAD^
+
 	l = log --decorate --graph
 	pr = pull --rebase
 	ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
