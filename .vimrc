@@ -39,6 +39,10 @@ set suffixes+=.info,.aux,.log,.dvi,.bbl,.out,.o,.lo
 if v:version >= 700
   set numberwidth=3
 endif
+
+set number		" enable line numbers
+" set line numbers color
+highlight LineNr ctermfg=yellow
 " }}}
 
 " {{{ Modeline settings
