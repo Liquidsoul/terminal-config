@@ -21,7 +21,7 @@
 	amend = commit --amend -C HEAD
 	undo = reset --soft HEAD^
 
-	l = log --decorate --graph
+	l = log --decorate --graph --date=iso
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
