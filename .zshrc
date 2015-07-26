@@ -92,3 +92,6 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/python # Add python dir for pip
+
+# change git plugin 'gl' from 'git pull' go 'git log'
+alias gl='git log --decorate --graph --date=iso'
