@@ -36,3 +36,5 @@
 	sapply = "!f() { git stash apply \"$(git stash list | grep -E \"$*\" | awk \"{ print $ 1; }\" | sed -n \"s/://;1p\")\"; }; f"
 [core]
 	pager = less -FRSX
+[push]
+	default = simple
