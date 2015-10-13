@@ -21,7 +21,7 @@ ZSH_THEME="Soliah"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(git textmate ruby lighthouse rails3 rvm osx)
-plugins=(git brew gem)
+plugins=(git brew gem bundler)
 
 source $ZSH/oh-my-zsh.sh
 
