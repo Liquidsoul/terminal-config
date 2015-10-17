@@ -1,0 +1,6 @@
+brew 'dos2unix'
+brew 'git'
+brew 'hub'
+brew 'trash'
+brew 'tree'
+brew 'zsh'
