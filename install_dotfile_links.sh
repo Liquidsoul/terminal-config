@@ -5,7 +5,7 @@
 SCRIPT_DIR="$( cd -P "$( dirname "$0" )" && pwd )"
 
 pushd $SCRIPT_DIR > /dev/null
-for cfg_file in `ls -A | grep -Ev "^\.git(ignore)?$" | grep -E "^\."`
+for cfg_file in `ls -A | grep -Ev "^\.(git(ignore)?|DS_Store)$" | grep -E "^\."`
 do
   src_path=$SCRIPT_DIR/$cfg_file
   link_path=~/$cfg_file
