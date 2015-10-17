@@ -21,6 +21,7 @@ I use [oh_my_zsh](http://ohmyz.sh/) to manage my zsh configuration.
 
 * [trash](http://hasseg.org/trash/): let you send files to the trash from the command-line instead of using the *remorseless* `rm`
 * [hub](https://hub.github.com/): useful command-line tool to interact with your GitHub repositories
+* [z](https://github.com/rupa/z): quickly access most 'frecent' directory
 
 ## Local aliases
 

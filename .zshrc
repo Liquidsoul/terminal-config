@@ -90,6 +90,10 @@ then
 	source ~/.zsh_custom_aliases
 fi
 
+# z setup
+. `brew --prefix`/etc/profile.d/z.sh
+
+# PATH setup
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/python # Add python dir for pip
 
