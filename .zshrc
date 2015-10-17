@@ -45,7 +45,22 @@ function virtualenv_info {
 
 
 # Build the main prompt
-if [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
+function powerline_precmd() {
+  PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [[ -e ~/powerline-shell.py ]] && [[ "$TERM" != "linux" ]]; then
+  install_powerline_precmd
+elif [[ "$TERM" != "dumb" ]] && [[ "$DISABLE_LS_COLORS" != "true" ]]; then
   PROMPT='%{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%} in %{$fg_bold[green]%}${PWD/#$HOME/~}%{$reset_color%}$(git_prompt_info) ${return_code}$(git_prompt_status)%{$reset_color%} $(virtualenv_info)$(prompt_char) '
 
   ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}"
