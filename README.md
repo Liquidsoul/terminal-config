@@ -1,5 +1,15 @@
 # My terminal configuration
 
+This is my Terminal setup.
+
+## Installation
+
+Run this script:
+
+    $ install.sh
+
+This will install the prerequisites and create symbolink links to dot files (e.g. `.zshrc`).
+
 I use [oh_my_zsh](http://ohmyz.sh/) to manage my zsh configuration.
 
 ## Tools
